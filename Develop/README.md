@@ -2,38 +2,31 @@
     
 # README GENERATOR
     
-    ## About The Project
-    Gernerate your readme file of your project
+## About The Project
+Gernerate your readme file of your project
 
-    ## Getting Started
+## Getting Started
 
-    ### Installation Instructions
-        `npm install`
+### Installation Instructions
+`npm install`
         
 
-    ### Usage Information
-    `node index.js`
+### Usage Information
+`node index.js`
   
+### Test Instructions
 
+## License
+
+Distributed under the The MIT License for more information see (The MIT License)[https: //opensource.org/licenses/MIT]
     
-
-    ### Test Instructions
-
-
-
-    
-    ## License
-
-    Distributed under the The MIT License for more information see (The MIT License)[https: //opensource.org/licenses/MIT]
-    
-
-    ### Questions
-        My username: Abdulqadir51
-        My email: abdulessa93@gmail.com
+### Questions
+My username: Abdulqadir51
+My email: abdulessa93@gmail.com
     
 
 
-    <details>
+  <details>
     <summary>Table of Contents</summary>
     <ol>
       <li>
