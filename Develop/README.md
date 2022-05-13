@@ -1,6 +1,6 @@
 [![The MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)]](https://opensource.org/licenses/MIT)
     
-    # README GENERATOR
+# README GENERATOR
     
     ## About The Project
     Gernerate your readme file of your project
