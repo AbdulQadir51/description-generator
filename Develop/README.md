@@ -14,13 +14,11 @@ Gernerate your readme file of your project
 ### Usage Information
 `node index.js`
   
-### Test Instructions
-
 ## License
 
-Distributed under the The MIT License for more information see (The MIT License)[https: //opensource.org/licenses/MIT]
+Distributed under the The MIT License for more information see [The MIT License](https://opensource.org/licenses/MIT)
     
-### Questions
+## Questions
 My username: Abdulqadir51
 My email: abdulessa93@gmail.com
     
