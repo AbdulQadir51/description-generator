@@ -1,4 +1,4 @@
-// License links
+// Few License links stored in an array
 [
     'The MIT License', 'ISC License (ISC)', 'The Perl License', 'Mozilla Public License 2.0',
 ]
@@ -6,7 +6,7 @@ var licenses = [{
         license: 'The MIT License',
         name: 'The MIT License',
         svg: 'https://img.shields.io/badge/License-MIT-yellow.svg',
-        link: 'https: //opensource.org/licenses/MIT'
+        link: 'https://opensource.org/licenses/MIT'
     },
     {
         license: 'ISC License (ISC)',
@@ -37,8 +37,8 @@ function renderLicenseBadge(name) {
             return true
         }
     });
-
-    var markup = `[![${licenses[index].name}](${licenses[index].svg})](${licenses[index].link})`;
+    // '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  '
+    var markup = `[![License: ${licenses[index].name}](${licenses[index].svg})](${licenses[index].link})`;
     return markup;
 
 }
@@ -61,19 +61,17 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
 
     var markup = `
-    ## License
-    Distributed under the ${license} for more information see (${license})[${renderLicenseLink(license)}]
-    `
+## License
+Distributed under the ${license} for more information see [${license}](${renderLicenseLink(license)})`
     return markup
 }
 
 // TODO: Create a function that returns the installation section of README
 // If there is no installation, return an empty string
 function renderInstallationSection(install) {
-    if (install != null)
+    if (install != '')
         return `### Installation Instructions
-        ${install}
-        `
+${install}`
 
     return ''
 
@@ -84,10 +82,9 @@ function renderInstallationSection(install) {
 // If there is no usage, return an empty string
 function renderUsageSection(usage) {
 
-    if (usage != null)
+    if (usage != '')
         return `### Usage Information
-    ${usage}
-  `
+${usage}`
 
     return ''
 }
@@ -96,11 +93,9 @@ function renderUsageSection(usage) {
 // TODO: Create a function that returns the contribution section of README
 // If there is no contribution, return an empty string
 function renderContributionSection(contribution) {
-    if (contribution != null)
+    if (contribution != '')
         return `### Contribution Guidelines
-${contribution}
-`
-
+${contribution}`
     return ''
 }
 
@@ -108,21 +103,19 @@ ${contribution}
 // TODO: Create a function that returns the test section of README
 // If there is no test, return an empty string
 function renderTestSection(test) {
-    if (test != null)
+    if (test != '')
         return `### Test Instructions
-${test}
-`
+${test}`
     return ''
 }
 
 // TODO: Create a function that returns the Questions section of README
 // If there is no Questions, return an empty string
 function renderQuestionsSection(username, email) {
-    if (username != null && email != null) {
-        return `### Questions
-        My username: ${username}
-        My email: ${email}
-    `
+    if (username != '' && email != '') {
+        return `## Questions
+My username: ${username}
+My email: ${email}`
     }
 
     return ''
@@ -132,28 +125,27 @@ function renderQuestionsSection(username, email) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
     return `${renderLicenseBadge(data.license)}
+
+# ${data.title}
     
-    # ${data.title}
-    
-    ## About The Project
-    ${data.description}
+## About The Project
+${data.description}
 
-    ## Getting Started
+## Getting Started
 
-    ${renderInstallationSection(data.installation)}
+${renderInstallationSection(data.installation)}
 
-    ${renderUsageSection(data.usage)}
+${renderUsageSection(data.usage)}
 
-    ${renderContributionSection(data.contribution)}
+${renderContributionSection(data.contribution)}
 
-    ${renderTestSection(data.test)}
+${renderTestSection(data.test)}
 
-    ${renderLicenseSection(data.license)}
+${renderLicenseSection(data.license)}
 
-    ${renderQuestionsSection(data.username,data.email)}
+${renderQuestionsSection(data.username,data.email)}
 
-
-    <details>
+<details>
     <summary>Table of Contents</summary>
     <ol>
       <li>
@@ -165,8 +157,7 @@ function generateMarkdown(data) {
       <li><a href="#license">License</a></li>
       <li><a href="#questions">Questions</a></li>
     </ol>
-  </details>
-
+</details>
 `;
 }
 

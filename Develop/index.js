@@ -11,7 +11,7 @@ const questions = [
     { name: 'description', message: 'Please enter your prject description' },
     { name: 'installation', message: 'Please enter your installation instructions' },
     { name: 'usage', message: 'Please enter your usage information' },
-    { name: 'guidelines', message: 'Please enter your contribution guidelines' },
+    { name: 'contribution', message: 'Please enter your contribution guidelines' },
     { name: 'test', message: 'Please enter your test instructions' },
     { name: 'username', message: 'Please enter your GitHub username' },
     { name: 'email', message: 'Please enter your email address' },
